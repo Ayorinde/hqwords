@@ -17,9 +17,12 @@
   "license": "ISC",
   "dependencies": {
     "apollo-server-express": "^2.4.8",
-    "esm": "^3.2.18",
+    "bcryptjs": "^2.4.3",
+    "esm": "^3.2.22",
     "express": "^4.16.4",
-    "graphql": "^14.1.1",
-    "mongoose": "^5.4.19"
+    "graphql": "^14.2.1",
+    "graphql-date": "^1.0.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.5.4"
   }
 }
