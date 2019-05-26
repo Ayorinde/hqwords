@@ -12,3 +12,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.container-fluid.app{
+  padding-right: 0;
+  padding-left: 0;
+}

@@ -1,0 +1,15 @@
+.carousel .carousel-item{
+ max-height: 70vh;
+}
+
+.carousel .carousel-item .carousel-caption{
+    background-color: #d89d5180;
+}
+
+ .carousel .carousel-item .carousel-caption h3{
+    
+}
+/*
+.carousel .carousel-item .carousel-caption p{
+    max-height: 70vh;
+} */

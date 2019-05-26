@@ -1,10 +1,11 @@
 import React from 'react';
 import Main from './Main';
 
+import './index.css';
+
 function App() {
     return (
-        <div className="app">
-            <h1>hqwords</h1>
+        <div className="container-fluid app">
             <Main />
         </div>
     );
