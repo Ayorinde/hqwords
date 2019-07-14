@@ -15,3 +15,30 @@
 - Add full version of books and some posters
 - Buid full ecommerce so purchases can be made on the site
 - Marketing and promotions
+
+## Slider 1 content
+ Publicity for your creativity
+  Let your voice be heard
+    Tell us about what you've written and we'll let the world know about it
+
+## Slider 2 content
+ Be inspired by reading this book of poems by one of our amazing authors
+  Feel the power of expressions
+   Vials of Almonds: Chinyere's collection of poems
+
+## About Section Content
+ Each month we'll bring you amazing contents from a selected author
+ We'll also bring you training about writing and give you amazing content on self development
+
+## Products & Services Section Content
+- Books (Books you should read this month)
+- Poems (Selected poems for you this month)
+- Writing (Sign up for our Trainings on creative writing)
+- Book Art and Posters (Let's create cool book arts and posters for your books and creative writings)
+
+## Footer Section Content
+- Mission
+- Vision
+- Copyright
+
+
