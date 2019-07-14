@@ -8,23 +8,17 @@ import '../styles/carousel.css';
 
 const items = [
     {
-        src: banner1,
-        altText: 'Slide 1',
-        caption: 'Slide 1',
-        header: 'Slide 1 Header'
+        src: banner2,
+        altText: 'inspiration',
+        caption: 'Feel the power of expressions',
+        header: 'Books from amazing authors'
     },
     {
-        src: banner2,
-        altText: 'Slide 2',
-        caption: 'Slide 2',
-        header: 'Slide 2 Header'
+        src: banner1,
+        altText: 'publicity',
+        caption: 'Let your voice be heard',
+        header: 'Publicity for your creativity'
     },
-    // {
-    //     src: banner3,
-    //     altText: 'Slide 3',
-    //     caption: 'Slide 3',
-    //     header: 'Slide 3 Header'
-    // }
 ];
 
 const Example = () => <UncontrolledCarousel items={items} />;

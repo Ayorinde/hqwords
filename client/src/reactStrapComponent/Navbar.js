@@ -25,8 +25,8 @@ export default class Example extends React.Component {
     }
     render() {
         return (
-            <div>
-                <Navbar color="light" light expand="md">
+            <div className="y-navbar">
+                <Navbar light expand="md">
                     <NavbarBrand href="/">
                         <img src={logo} alt='hqwords logo' className='app-logo' />
                     </NavbarBrand>
@@ -34,28 +34,36 @@ export default class Example extends React.Component {
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink href="/components/">Components</NavLink>
+                                <NavLink href="#/home/">Home</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                                <NavLink href="#/about-us/">About Us</NavLink>
                             </NavItem>
-                            <UncontrolledDropdown nav inNavbar>
+                            <NavItem>
+                                <NavLink href="#/products/">Our Products</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="#/services/">Our Services</NavLink>
+                            </NavItem>
+
+
+                            {/* <UncontrolledDropdown nav inNavbar>
                                 <DropdownToggle nav caret>
                                     Options
-                </DropdownToggle>
+                                </DropdownToggle>
                                 <DropdownMenu right>
                                     <DropdownItem>
                                         Option 1
-                  </DropdownItem>
+                                </DropdownItem>
                                     <DropdownItem>
                                         Option 2
-                  </DropdownItem>
+                                    </DropdownItem>
                                     <DropdownItem divider />
                                     <DropdownItem>
                                         Reset
-                  </DropdownItem>
+                                    </DropdownItem>
                                 </DropdownMenu>
-                            </UncontrolledDropdown>
+                            </UncontrolledDropdown> */}
                         </Nav>
                     </Collapse>
                 </Navbar>

@@ -1,6 +1,7 @@
 import React from 'react';
 
-import './App.css';
+//import './App.css';
+import './styles/settings.css';
 
 import apollo from './apollo/configure';
 import { GET_SERVICES } from './apollo/queries/serviceModel';
@@ -16,7 +17,7 @@ apollo.client.query({
 
 function Main() {
     return (
-        <div className="Main">
+        <div className="main">
             <Navbar />
             <Carousel />
 

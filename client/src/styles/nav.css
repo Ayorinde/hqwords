@@ -2,3 +2,12 @@
     height: 8vmin;
     pointer-events: none;
   }
+
+.app .main .y-navbar{
+  background-color: #990134;
+}
+.app .main .y-navbar .nav-link{
+  color: #E59500;
+  font-weight: bold;
+  font-size: .9rem;
+}
