@@ -12,3 +12,26 @@
   font-weight: bold;
   font-size: .9rem;
 }
+
+@media screen and (max-width: 770px) {
+  .app .main .y-navbar nav.navbar .navbar-toggler-icon{
+    width: 1em;
+    height: 1em;
+  }
+  .app .main .y-navbar nav.navbar .navbar-collapse{
+    position: absolute;
+    top: 3.7rem;
+    background-color: rgba(153,1,52,.4);
+    width: 90%;
+    padding: .6rem;
+    border-radius: .4rem;
+  }
+  .app .main .y-navbar nav.navbar .navbar-collapse ul li{
+    margin: 0;
+    padding: 0;
+  }
+  .app .main .y-navbar nav.navbar .navbar-collapse ul li:nth-child(even){
+
+    /* padding-left: .5rem; */
+  }
+}
