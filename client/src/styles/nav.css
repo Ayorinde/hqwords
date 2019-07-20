@@ -3,11 +3,12 @@
     pointer-events: none;
   }
 
-.app .main .y-navbar{
-  background-color: #990134;
+.app .main .y-navbar nav.navbar{
+  background-color: rgba(153,1,52,0);
+  z-index: 20;
 }
 .app .main .y-navbar .nav-link{
-  color: #E59500;
+  color: #E5DADA;
   font-weight: bold;
   font-size: .9rem;
 }

@@ -42,3 +42,11 @@
 - Copyright
 
 
+sample designs:
+https://www.simform.com/?ref=lapaninja
+https://www.yourshadeofparadise.com/en/
+https://www.netguru.com/design-process?ref=lapaninja
+https://www.perlego.com/?ref=lapaninja
+https://slack.com/intl/en-ng/resources?ref=lapaninja
+
+
