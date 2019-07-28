@@ -1,0 +1,27 @@
+.app .y-afterheader{
+    /* background-color: rgba(153,1,52,.4); */
+}
+.app .y-offerings{
+    /* color: #02040F; */
+    color: rgba(2,4,15, .85)
+}
+.app .y-offerings > h1{
+    padding: 1em;
+    color: rgba(153,1,52, .8);
+    text-shadow: rgba(153,1,52, .2) 1px 2px 2px;
+    text-transform: uppercase;
+    font-size: 1.8em;
+}
+.app .y-offerings h3{
+    
+}
+
+.app .y-offerings i.fas, .app .y-offerings i.yfont{
+    font-size: 7em;
+    color: rgba(153,1,52, .7);
+    text-shadow: rgba(153,1,52, .2) 1px 2px 2px;
+}
+
+.app .y-offerings .y-offering-item{
+    text-align: center;
+}
