@@ -4,12 +4,14 @@
   }
 
 .app .main .y-navbar nav.navbar{
-  background-color: rgba(153,1,52,0);
+  /* background-color: rgba(153,1,52,0); */
+  /*background-color: rgba(229,149,0,.8); #E59500;*/
+  background-color: transparent;
   z-index: 20;
 }
 .app .main .y-navbar .nav-link{
   color: #E5DADA;
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: .9rem;
 }
 

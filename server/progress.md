@@ -10,10 +10,10 @@
 - Add list of services to the products
 - Organize portfolios(create folders for difft photos & media)
 - Add short videos & audios
-- Add a link to downloadable materials on the home page
+- Add a link to downloadable materials on the home page (3)
 - Organize downloadables into books, posters, etc
-- Add full version of books and some posters
-- Buid full ecommerce so purchases can be made on the site
+- Add full version of books and some posters (1)
+- Buid full ecommerce so purchases can be made on the site (2)
 - Marketing and promotions
 
 ## Slider 1 content

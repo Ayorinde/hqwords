@@ -14,9 +14,9 @@ import Carousel from './reactStrapComponent/Carousel';
 
 import Home from './pages/Home';
 
-apollo.client.query({
-    query: GET_SERVICES
-}).then(result => console.log(result));
+// apollo.client.query({
+//     query: GET_SERVICES
+// }).then(result => console.log(result));
 
 function Main() {
     return (
@@ -28,8 +28,6 @@ function Main() {
 
                 {/* <Services /> */}
             </div>
-
-            
         </div>
     );
 }

@@ -11,13 +11,13 @@ const items = [
         src: banner2,
         altText: 'inspiration',
         caption: 'Feel the power of expressions',
-        header: 'Books from amazing authors'
+        header: 'Books from Amazing Authors'
     },
     {
         src: banner1,
         altText: 'publicity',
         caption: 'Let your voice be heard',
-        header: 'Publicity for your creativity'
+        header: 'Publicity for your Creativity'
     },
 ];
 

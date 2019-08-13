@@ -1,22 +1,30 @@
 import React from 'react'
-import { Query } from 'react-apollo';
+import { useQuery } from '@apollo/react-hooks';
 
-import MyQuery from '../apollo/MyQuery';
 import { GET_SERVICES } from '../apollo/queries/serviceModel'
 
 export default function Services() {
-    return (
-        <MyQuery query={GET_SERVICES}>
-            {({ data }) => {
-                return (<ul>
-                    {
-                        data.services.map(({ _id, name }) => (
-                            <li key={_id}>{name} ....</li>
-                        ))
-                    }
-                </ul>);
-            }
-            }
-        </MyQuery>
-    );
+    const { data, loading, error } = useQuery(GET_SERVICES);
+    if (loading) {
+        return (<p> loading .... </p>)
+    }
+    else {
+        if (error) {
+            console.log('error: ', error);
+            return (<p> Error loading services: {error.message} </p>)
+        }
+        else {
+
+            let loadedLis = data && data.services.map(({ _id, name }) => (
+                <li key={_id}>{name} ____</li>
+            ))
+
+            return (
+                <ul>
+                    {loadedLis}
+                </ul>
+            )
+
+        }
+    }
 };

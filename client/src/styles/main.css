@@ -3,25 +3,106 @@
 }
 .app .y-offerings{
     /* color: #02040F; */
-    color: rgba(2,4,15, .85)
+    /* color: rgba(2,4,15, .85); */
+    padding-bottom: 4rem;
+    padding-top: 1.6rem;    
 }
-.app .y-offerings > h1{
-    padding: 1em;
+.app h1.y-section-heading{
+    padding: 1rem;
     color: rgba(153,1,52, .8);
     text-shadow: rgba(153,1,52, .2) 1px 2px 2px;
     text-transform: uppercase;
-    font-size: 1.8em;
-}
-.app .y-offerings h3{
+    font-size: 1.7rem;
     
+    text-align: center;
+}
+.app .y-subheading{
+    text-align: center;
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-top: -1.4rem;
+}
+.app .y-about .y-subheading{
+    color: #E5DADA;
+    text-shadow: 1px 1px rgb(48, 45, 45);
+    margin-bottom: 4rem;
+}
+.app section{
+    margin-top: 3rem;
+}
+.app section.y-about{
+    background-image: linear-gradient(105deg,
+    rgba(2,4,15,.7), rgba(2,4,15,.3)),
+     url(../images/others/about-reading2.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+    min-height: 15rem;
+    background-attachment: fixed;
+    /* padding: 6rem 6.5rem; */
+    padding-bottom: 5rem !important;
+    color: #E5DADA;
+}
+
+/* .app section.y-about > div{
+    padding-top: 3rem;
+    padding-bottom: 3rem; 
+
+} */
+
+.app .btn-secondary{
+    background-color: #E59500 !important;
+}
+
+.app .btn-primary{
+    background-color: #990134 !important;
+}
+
+.app section.y-about .btn-primary{
+    background-color: #990134 !important;
+}
+.app .y-offerings > h1{
+    padding: 1rem;
+    color: rgba(153,1,52, .8);
+    text-shadow: rgba(153,1,52, .2) 1px 2px 2px;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+}
+.app .y-offerings h2{
+    font-size: 1.3rem;   
+}
+.app .y-offerings p{
+    /* font-size: 1.3rem;    */
 }
 
 .app .y-offerings i.fas, .app .y-offerings i.yfont{
-    font-size: 7em;
+    font-size: 7rem;
     color: rgba(153,1,52, .7);
     text-shadow: rgba(153,1,52, .2) 1px 2px 2px;
 }
 
 .app .y-offerings .y-offering-item{
     text-align: center;
+}
+
+.app .y-footer{
+    /* margin-top: 4rem; */
+    
+    /* padding: 4rem 7rem 1rem 7rem; */
+    padding-top: 5rem !important;
+    font-size: .8rem;
+    /* background-color: rgba(153,1,52,.98); */
+    background-image: linear-gradient(to bottom, rgba(153,1,52,.95), rgb(153,1,52) );
+    color: rgba(229,218,218, .95);
+}
+
+.app .y-footer h3{
+    font-size: 1.1rem;
+    color: rgba(229,218,218, .9);
+    text-transform: uppercase;
+}
+
+.app .y-footer .y-copyright{
+    border-top: 1px solid rgba(229,218,218, .3);
+    margin-top: 3rem;
+    padding-top: 1rem;
 }
