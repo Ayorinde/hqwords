@@ -3,7 +3,7 @@ import { verifyToken } from './services/auth';
 async function auth(req, res, next) {
     try {
         const token = req.headers.authorization;
-        if (token != null) {
+        if (token && (token.length > 10)) {
             const user = await verifyToken(token);
             req.user = user;
             console.log('user: ', user)

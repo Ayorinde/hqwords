@@ -3,8 +3,8 @@ import { useMutation } from '@apollo/react-hooks'
 
 import { useInput } from '../../hooks/useInput';
 import SIGNUP from '../../apollo/mutation/signup';
-import { removeClientSetsFromDocument } from 'apollo-utilities';
-
+import * as routes from '../../constants/routes';
+import * as constants from '../../constants/localsaves';
 export default function SignupForm(props) {
     const email = useInput();
     const password = useInput();
@@ -29,7 +29,7 @@ export default function SignupForm(props) {
 
     const onSubmit = (e) => {
         let formValues = {
-            fullName: `${fname} ${lname}`,
+            fullName: `${fname.value} ${lname.value}`,
             email: email.value, password: password.value
         }
         console.log('all: ', formValues)
@@ -42,9 +42,10 @@ export default function SignupForm(props) {
         console.log('success: ', data);
         console.log('data.signup.token: ', data.signup.token)
         let token = data.signup.token;
-        window.localStorage.setItem('hqwords:user', { ...formValues, token });
+        let toSave = JSON.stringify({ ...formValues, token })
+        window.localStorage.setItem(`${constants.APP_NAMESPACE}:user`, toSave);
         props.history.push({
-            pathname: '/dashboard',
+            pathname: routes.DASHBOARD,
             state: { user: formValues }
         })
 

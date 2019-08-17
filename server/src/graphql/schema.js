@@ -17,7 +17,6 @@ export const typeDefs = gql`
     updatedAt: Date!
   }
 
-
   type Me {
     _id: ID!
     username: String
@@ -29,9 +28,50 @@ export const typeDefs = gql`
     updatedAt: Date!
   }
 
+  type User {
+    _id: ID!
+    username: String
+    email: String!
+    firstName: String
+    lastName: String
+    userImage: String
+    createdAt: Date!
+    updatedAt: Date!
+  }
+
+
+
   type Category{
     _id: ID!
     name: String
+  }
+
+  type Tag{
+    _id: ID!
+    name: String
+  }
+
+  type Book{
+    _id: ID!
+    title: String!
+    description: String
+    artwork: String
+    price: String
+    category: Category
+    author: User
+    authors: [User]
+    tags: [Tag]
+  }
+
+  input createBookInput{
+    title: String!
+    description: String!
+    artwork: String 
+    price: String
+    category: ID
+    author: ID
+    authors: [ID]
+    tags: [ID]
   }
 
 
@@ -42,6 +82,9 @@ export const typeDefs = gql`
 
     getCategory(_id: ID!): Category
     getCategories: [Category]
+
+    book(_id: ID!): Book
+    books: [Book]
   }
 
   type Mutation {
@@ -50,6 +93,9 @@ export const typeDefs = gql`
 
     createService(name: String!, description: String, icon: String, thumbnail: String, bannerImage: String ): Service
     createCategory(name: String): Category
+
+    createBook(input: createBookInput): Book
+
 
   }
 

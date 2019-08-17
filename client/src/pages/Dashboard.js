@@ -1,5 +1,7 @@
 import React from 'react';
-import '../styles/main.css'
+import '../styles/main.css';
+
+import UploadForm from '../pageComponents/dashboard/UploadForm';
 
 
 export default function Dashboard(props) {
@@ -9,7 +11,8 @@ export default function Dashboard(props) {
     }
     return (
         <div className="y-dashboard">
-            <h1>Welcome</h1>
+
+            <UploadForm />
         </div>
     )
 }

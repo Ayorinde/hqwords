@@ -13,7 +13,7 @@ export default function Offerings() {
                     </div>
                 </div>
                 <div className="col-sm y-offering-item">
-                    <p><i class="yfont icofont-fountain-pen"></i></p>
+                    <p><i className="yfont icofont-fountain-pen"></i></p>
                     <div className="y-offering-item-content">
                         <h2> Creative Writing</h2>
                         <p>Thought provoking articles. And training in creative writing</p>
