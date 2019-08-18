@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import { SIGN_UP } from '../../constants/routes'
+import { SIGN_UP, BOOKS } from '../../constants/routes'
 
 export default function About() {
     return (
@@ -12,7 +12,11 @@ export default function About() {
                     <h5>Read</h5>
                     <p> We bring you beautiful words from amazing authors. </p>
                     <p>Every author is vetted. And we only accept their best works</p>
-                    <p><button className="btn btn-primary" >View Books</button></p>
+                    <p>
+                        <Link to={BOOKS}>
+                            <button className="btn btn-primary" >View Books</button>
+                        </Link>
+                    </p>
                 </div>
                 <div className="col-sm y-about-summary">
                     <h5>Write</h5>

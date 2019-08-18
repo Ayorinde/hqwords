@@ -58,6 +58,7 @@ export const typeDefs = gql`
     artwork: String
     price: String
     category: Category
+    authorName: String
     author: User
     authors: [User]
     tags: [Tag]
@@ -69,6 +70,7 @@ export const typeDefs = gql`
     artwork: String 
     price: String
     category: ID
+    authorName: String
     author: ID
     authors: [ID]
     tags: [ID]

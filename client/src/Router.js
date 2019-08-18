@@ -1,10 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import * as routes from './constants/routes';
 import Home from './pages/Home';
 import SignUpPage from './pages/SignUp';
 import Dashboard from './pages/Dashboard';
+import BooksPage from './pages/Books';
 
 
 // import './styles/settings.css';
@@ -16,6 +17,7 @@ function App() {
             <div className="container-fluid app">
                 <Route exact path={routes.LANDING} component={Home} />
                 <Route path={routes.SIGN_UP} component={SignUpPage} />
+                <Route path={routes.BOOKS} component={BooksPage} />
                 <Route path={routes.DASHBOARD} component={Dashboard} />
             </div>
         </Router>

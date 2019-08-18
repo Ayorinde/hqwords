@@ -106,3 +106,7 @@
     margin-top: 3rem;
     padding-top: 1rem;
 }
+
+.app .card-group .card-body.y-cardbody{
+    font-size: .75rem;
+}

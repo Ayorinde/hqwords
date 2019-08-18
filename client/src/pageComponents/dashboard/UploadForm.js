@@ -11,6 +11,8 @@ export default function UploadForm(props) {
     const password = useInput();
     const title = useInput();
     const description = useInput();
+    const price = useInput();
+    const authorName = useInput();
     const artwork = useInput();
     const [formValues, setFormValues] = useState(null)
     const [selectedFile, setSelectedFile] = useState(null)
@@ -35,6 +37,7 @@ export default function UploadForm(props) {
             let formValues = {
                 title: title.value, description: description.value,
                 artwork: res.data.secure_url,
+                price: price.value, authorName: authorName.value
             }
             console.log('all: ', formValues)
 
@@ -74,6 +77,20 @@ export default function UploadForm(props) {
                             {...title}
                             placeholder="The book title" />
                     </div>
+                    <div className="form-group">
+                        <label htmlFor="title">Price</label>
+                        <input type="text" className="form-control" id="price"
+                            {...price}
+                            placeholder="Price" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="title">Author Name</label>
+                        <input type="text" className="form-control" id="authorName"
+                            {...authorName}
+                            placeholder="Author Name" />
+                    </div>
+
+
                     <div className="form-group">
                         <label htmlFor="description">Description</label>
                         <input type="text" className="form-control" id="description"

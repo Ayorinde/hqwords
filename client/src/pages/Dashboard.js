@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/main.css';
 
 import UploadForm from '../pageComponents/dashboard/UploadForm';
+import Navbar from '../reactStrapComponent/Navbar'
 
 
 export default function Dashboard(props) {
@@ -10,9 +11,12 @@ export default function Dashboard(props) {
         console.log(`flights: ${JSON.stringify(user, null, 4)}`)
     }
     return (
-        <div className="y-dashboard">
+        <>
+            <Navbar />
+            <div className="y-dashboard">
 
-            <UploadForm />
-        </div>
+                <UploadForm />
+            </div>
+        </>
     )
 }

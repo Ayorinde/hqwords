@@ -10,7 +10,7 @@ import Footer from '../pageComponents/Home/Footer';
 export default function Home() {
     return (
         <>
-            {/* <Navbar /> */}
+            <Navbar />
             <Carousel />
             <div className="y-afterheader">
                 <Offerings />

@@ -13,7 +13,7 @@
 - Add a link to downloadable materials on the home page (3)
 - Organize downloadables into books, posters, etc
 - Add full version of books and some posters (1)
-- Buid full ecommerce so purchases can be made on the site (2)
+- Build full ecommerce so purchases can be made on the site (2)
 - Marketing and promotions
 
 ## Slider 1 content
@@ -40,6 +40,24 @@
 - Mission
 - Vision
 - Copyright
+
+## Call For Actions
+- Read poems
+- Read articles
+- Get A poster / book art
+- Upload book
+- Write Poem
+- Write Article
+- View your poems 
+- View your articles
+- Start Your Creative Writing Training Now
+- Buy Book
+- Download Free Sample
+- View Free downloadables
+
+## Todo
+- put a featured book in the slider (Vial of Almonds)
+- put a section for getting started with creative writing training
 
 
 sample designs:

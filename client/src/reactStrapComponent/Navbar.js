@@ -1,9 +1,14 @@
 import React from 'react';
+import { NavLink as NLink } from 'react-router-dom'
+
 import {
     Collapse, Navbar, NavbarToggler, NavbarBrand, Nav,
     NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu,
     DropdownItem
 } from 'reactstrap';
+
+import { BOOKS, LANDING } from '../constants/routes'
+
 
 import logo from '../hqwordsLogo.png'
 import '../styles/nav.css';
@@ -27,20 +32,20 @@ export default class Example extends React.Component {
         return (
             <div className="y-navbar">
                 <Navbar light expand="md">
-                    <NavbarBrand href="/">
+                    <NavbarBrand tag={NLink} to={LANDING}>
                         <img src={logo} alt='hqwords logo' className='app-logo' />
                     </NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink href="#/home/">Home</NavLink>
+                                <NavLink tag={NLink} to={LANDING}>Home</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink href="#/about-us/">About Us</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="#/products/">Our Products</NavLink>
+                                <NavLink tag={NLink} to={BOOKS}>Our Products</NavLink>
                             </NavItem>
                             <NavItem>
                                 <NavLink href="#/services/">Our Services</NavLink>

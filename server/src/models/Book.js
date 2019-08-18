@@ -8,6 +8,7 @@ const BookSchema = new Schema({
     description: { type: String },
     artwork: { type: String },
     price: { type: String },
+    authorName: { type: String },
     category: {
         type: Schema.Types.ObjectId,
         ref: "Category"
