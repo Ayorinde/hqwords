@@ -3,6 +3,7 @@ import GraphQLDate from 'graphql-date';
 import CategoryResolvers from './category-resolver';
 import UserResolvers from './user-resolvers';
 import ServiceResolvers from './service-resolver';
+import BookResolvers from './book-resolver';
 //import User from '../../models/User';
 
 export default {
@@ -17,6 +18,7 @@ export default {
 
         getCategory: CategoryResolvers.getCategory,
         getCategories: CategoryResolvers.getCategories,
+        books: BookResolvers.books,
 
         me: UserResolvers.me,
     },
@@ -26,6 +28,7 @@ export default {
 
         createService: ServiceResolvers.createService,
         createCategory: CategoryResolvers.createCategory,
+        createBook: BookResolvers.createBook,
 
     }
 }

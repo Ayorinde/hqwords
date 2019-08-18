@@ -11,17 +11,20 @@ export default {
     },
     books: async (_, args, { user }) => {
         try {
+            console.log('getin books ..')
             return Book.find({}).sort({ createdAt: -1 })
         } catch (error) {
             throw error;
         }
     },
-    createBook: async (_, args, { user }) => {
+    createBook: async (_, { input: args }, { user }) => {
         try {
+            console.log('user in create book: ', user)
+            console.log('args: ', args)
             await getUserObj(user);
-            return Book.create({ ...args, user: user._id });
+            return Book.create({ ...args, author: user._id });
         } catch (error) {
-            console.log('error creating service: ', error.message)
+            console.log('error creating book: ', error.message)
             throw error;
         }
     },
