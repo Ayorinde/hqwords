@@ -3,6 +3,7 @@ import '../styles/main.css';
 
 import UploadForm from '../pageComponents/dashboard/UploadForm';
 import Navbar from '../reactStrapComponent/Navbar'
+import NavVertical from '../pageComponents/dashboard/NavVertical';
 
 
 export default function Dashboard(props) {
@@ -10,12 +11,14 @@ export default function Dashboard(props) {
         let user = props.location.state.result.fullResult;
         console.log(`flights: ${JSON.stringify(user, null, 4)}`)
     }
+
     return (
         <>
             <Navbar />
             <div className="y-dashboard">
+                <NavVertical match={props.match} />
 
-                <UploadForm />
+                {/* <UploadForm /> */}
             </div>
         </>
     )

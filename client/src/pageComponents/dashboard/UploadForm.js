@@ -64,7 +64,7 @@ export default function UploadForm(props) {
     }
 
     return (
-        <div className="container py-5 y-signupform">
+        <div className="container y-signupform">
             <form>
                 <fieldset>
                     <legend>
