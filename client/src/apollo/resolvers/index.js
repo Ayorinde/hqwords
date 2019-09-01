@@ -8,7 +8,7 @@ export const typeDefs = gql`
 
   extend type User {
     token: String!
-    fullName: String!
+    fullName: String
     email: String!
   }
 
