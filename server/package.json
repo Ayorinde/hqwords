@@ -24,5 +24,8 @@
     "graphql-date": "^1.0.3",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.5.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }

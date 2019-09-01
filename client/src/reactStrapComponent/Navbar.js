@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { NavLink as NLink } from 'react-router-dom'
+import { useQuery } from '@apollo/react-hooks';
 
 import {
     Collapse, Navbar, NavbarToggler, NavbarBrand, Nav,
@@ -7,36 +8,34 @@ import {
     DropdownItem
 } from 'reactstrap';
 
-import { BOOKS, LANDING } from '../constants/routes'
+import { BOOKS, LANDING, SIGN_IN, ACCOUNT } from '../constants/routes'
+import { IS_LOGGED_IN} from '../apollo/queries/local';
 
 
 import logo from '../hqwordsLogo.png'
 import '../styles/nav.css';
 
+function IsLoggedIn() {
+    const { data } = useQuery(IS_LOGGED_IN);
+    return data.isLoggedIn ? <NavLink tag={NLink} to={ACCOUNT}> My Account</NavLink> : 
+    <NavLink tag={NLink} to={SIGN_IN}>Login / Register</NavLink>;
+}
 
-export default class Example extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.toggle = this.toggle.bind(this);
-        this.state = {
-            isOpen: false
-        };
+export default function MyNavbar(props) {
+    const [isOpen, toggle] = useState(false);
+    
+    const doToggle = () => {
+        toggle(!isOpen)
     }
-    toggle() {
-        this.setState({
-            isOpen: !this.state.isOpen
-        });
-    }
-    render() {
+    
         return (
             <div className="y-navbar">
                 <Navbar light expand="md">
                     <NavbarBrand tag={NLink} to={LANDING}>
                         <img src={logo} alt='hqwords logo' className='app-logo' />
                     </NavbarBrand>
-                    <NavbarToggler onClick={this.toggle} />
-                    <Collapse isOpen={this.state.isOpen} navbar>
+                    <NavbarToggler onClick={doToggle} />
+                    <Collapse isOpen={isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
                                 <NavLink tag={NLink} to={LANDING}>Home</NavLink>
@@ -49,6 +48,9 @@ export default class Example extends React.Component {
                             </NavItem>
                             <NavItem>
                                 <NavLink href="#/services/">Our Services</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                {IsLoggedIn()}
                             </NavItem>
 
 
@@ -74,5 +76,5 @@ export default class Example extends React.Component {
                 </Navbar>
             </div>
         );
-    }
+    
 }

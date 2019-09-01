@@ -2,6 +2,8 @@ import { ApolloClient } from 'apollo-client';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { HttpLink } from 'apollo-link-http';
 
+import { resolvers, typeDefs } from './resolvers';
+
 import * as constants from './../constants/localsaves'
 
 const cache = new InMemoryCache();
@@ -29,7 +31,9 @@ cache.writeData({
 
 const client = new ApolloClient({
     cache,
-    link
+    link,
+    typeDefs,
+    resolvers
 })
 
 console.log('client: ', client);
