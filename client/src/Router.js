@@ -7,6 +7,8 @@ import SignUpPage from './pages/SignUp';
 import Dashboard from './pages/Dashboard';
 import BooksPage from './pages/Books';
 
+import {PrivateRoute} from './auth/PrivateRoute';
+
 
 // import './styles/settings.css';
 // import './index.css';
@@ -18,7 +20,7 @@ function App() {
                 <Route exact path={routes.LANDING} component={Home} />
                 <Route path={routes.SIGN_UP} component={SignUpPage} />
                 <Route path={routes.BOOKS} component={BooksPage} />
-                <Route path={routes.DASHBOARD} component={Dashboard} />
+                <PrivateRoute path={routes.DASHBOARD} component={Dashboard} />
             </div>
         </Router>
     );

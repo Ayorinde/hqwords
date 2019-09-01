@@ -8,7 +8,7 @@ import {
     DropdownItem
 } from 'reactstrap';
 
-import { BOOKS, LANDING, SIGN_IN, ACCOUNT } from '../constants/routes'
+import { BOOKS, LANDING, SIGN_IN, DASHBOARD } from '../constants/routes'
 import { IS_LOGGED_IN} from '../apollo/queries/local';
 
 
@@ -17,7 +17,8 @@ import '../styles/nav.css';
 
 function IsLoggedIn() {
     const { data } = useQuery(IS_LOGGED_IN);
-    return data.isLoggedIn ? <NavLink tag={NLink} to={ACCOUNT}> My Account</NavLink> : 
+    console.log('data.isLoggedIn: ', data.isLoggedIn);
+    return data.isLoggedIn ? <NavLink tag={NLink} to={DASHBOARD}> My Account</NavLink> : 
     <NavLink tag={NLink} to={SIGN_IN}>Login / Register</NavLink>;
 }
 

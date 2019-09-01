@@ -24,7 +24,10 @@ export default function BooksList() {
                 <section className="container y-offerings p-3 p-md-5">
                     <h1 className="text-center"> Books You Should Read </h1>
                     <div className="card-group">
-                        {loadedLis}
+                        {
+                            loadedLis.length? loadedLis: 
+                            <p className="text-center"> :) There are no books at the moment</p>
+                        }
                     </div>
                 </section>
             )
