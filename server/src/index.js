@@ -19,10 +19,10 @@ app.use(express.urlencoded({ extended: false }));
 
 
 
+
+
+app.get('/', (req, res) => res.send('Hello World!'))
 app.use(middlewares.auth)
-
-app.get('/', (req, res) => res.send('Hello World!', req.user.name))
-
 
 const server = new ApolloServer({
     typeDefs,

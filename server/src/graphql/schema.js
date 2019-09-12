@@ -87,6 +87,7 @@ export const typeDefs = gql`
 
     book(_id: ID!): Book
     books: [Book]
+    userBooks: [Book]
   }
 
   type Mutation {

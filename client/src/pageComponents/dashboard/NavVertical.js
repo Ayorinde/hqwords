@@ -1,8 +1,10 @@
 import React from 'react';
-import { Link, NavLink as RLink, BrowserRouter, Route } from 'react-router-dom'
+import { Link, NavLink as RLink, BrowserRouter, Route , Switch} from 'react-router-dom'
 import { Nav, NavItem, NavLink } from 'reactstrap';
 
-import UploadForm from '../../pageComponents/dashboard/UploadForm'
+import UploadForm from '../../pageComponents/dashboard/UploadForm';
+import BookList from '../../pageComponents/Books/BooksList';
+import {GET_USER_BOOKS} from '../../apollo/queries/books'
 
 export default function NavVertical({ match }) {
     //{`${match.url}/${id}`}
@@ -17,11 +19,11 @@ export default function NavVertical({ match }) {
             main: () => <UploadForm />
         },
         {
-            path: `${match.url}/my-books`,
+            path: `${match.url}/`,
             exact: true,
             sidebar: () => (
-                <div className="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                    <h1>Another comp... Another comp...  Another comp... Another comp...</h1>
+                <div className="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                    <BookList listTitle='My Books' listQuery={GET_USER_BOOKS}/>
                 </div>
             ),
             main: () => <h2>Bubblegum</h2>
@@ -39,7 +41,7 @@ export default function NavVertical({ match }) {
                                 role="tab" aria-controls="v-pills-home" aria-selected="true">
                                 Upload Book
                             </Link>
-                            <Link to={`${match.url}/my-books`} className="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
+                            <Link to={`${match.url}/`} className="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
                                 role="tab" aria-controls="v-pills-profile" aria-selected="false">
                                 My Books
                             </Link>
@@ -60,14 +62,17 @@ export default function NavVertical({ match }) {
 
                     <div className="col-9">
                         <div className="tab-content" id="v-pills-tabContent">
-                            {routes.map((route, index) => (
-                                <Route
-                                    key={index}
-                                    path={route.path}
-                                    exact={route.exact}
-                                    component={route.sidebar}
-                                />
-                            ))}
+                            <Switch>
+                                {routes.map((route, index) => (
+                                    <Route
+                                        key={index}
+                                        path={route.path}
+                                        exact={route.exact}
+                                        component={route.sidebar}
+                                    />
+                                ))}
+
+                            </Switch>
                         </div>
                     </div>
                 </div>

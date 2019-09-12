@@ -19,6 +19,7 @@ export default {
         getCategory: CategoryResolvers.getCategory,
         getCategories: CategoryResolvers.getCategories,
         books: BookResolvers.books,
+        userBooks: BookResolvers.userBooks,
 
         me: UserResolvers.me,
     },

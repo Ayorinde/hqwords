@@ -17,6 +17,15 @@ export default {
             throw error;
         }
     },
+    userBooks: async (_, args, { user }) => {
+        try {
+            await getUserObj(user);
+          return Book.find({ user: user._id }).sort({ createdAt: -1 })
+        } catch (error) {
+            console.log('error getting user books: ', error.message)
+          throw error;
+        }
+      },
     createBook: async (_, { input: args }, { user }) => {
         try {
             console.log('user in create book: ', user)

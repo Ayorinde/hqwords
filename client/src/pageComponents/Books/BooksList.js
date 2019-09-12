@@ -1,11 +1,12 @@
 import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
-import { GET_BOOKS } from '../../apollo/queries/books';
+import { GET_BOOKS, GET_USER_BOOKS } from '../../apollo/queries/books';
 
 import BookItem from './BookItem';
 
-export default function BooksList() {
-    const { data, loading, error } = useQuery(GET_BOOKS);
+export default function BooksList({listQuery, listTitle}) {
+    let theQuery = listQuery? listQuery: GET_BOOKS;
+    const { data, loading, error } = useQuery(theQuery);
     if (loading) {
         return (<p> loading .... </p>)
     }
@@ -22,7 +23,7 @@ export default function BooksList() {
 
             return (
                 <section className="container y-offerings p-3 p-md-5">
-                    <h1 className="text-center"> Books You Should Read </h1>
+                    <h1 className="text-center"> {listTitle || 'Books You Should Read'}</h1>
                     <div className="card-group">
                         {
                             loadedLis.length? loadedLis: 

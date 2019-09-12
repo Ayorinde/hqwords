@@ -59,6 +59,13 @@
 - put a featured book in the slider (Vial of Almonds)
 - put a section for getting started with creative writing training
 
+## Related sites
+- [https://www.bookbaby.com](https://www.bookbaby.com)
+
+## Resources (Helpful sites)
+- [https://www.toptal.com/designers/htmlarrows/arrows/](https://www.toptal.com/designers/htmlarrows/arrows/)
+
+
 
 sample designs:
 https://www.simform.com/?ref=lapaninja
