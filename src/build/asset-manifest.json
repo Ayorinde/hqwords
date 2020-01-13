@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f6c44531.chunk.css",
+    "main.js": "/static/js/main.c4f3f55d.chunk.js",
+    "main.js.map": "/static/js/main.c4f3f55d.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.768c0a59.chunk.js": "/static/js/2.768c0a59.chunk.js",
+    "static/js/2.768c0a59.chunk.js.map": "/static/js/2.768c0a59.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.4bae35b7c92c5498feb4c60fcaf46e6a.js": "/precache-manifest.4bae35b7c92c5498feb4c60fcaf46e6a.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.f6c44531.chunk.css.map": "/static/css/main.f6c44531.chunk.css.map",
+    "static/media/main.css": "/static/media/about-reading2.b3f50029.jpg",
+    "static/media/hqwords-books-571.jpg": "/static/media/hqwords-books-571.776c816d.jpg",
+    "static/media/hqwords-coffee-h570.jpg": "/static/media/hqwords-coffee-h570.5c78992b.jpg",
+    "static/media/hqwordsLogo.png": "/static/media/hqwordsLogo.10c71f2a.png"
+  }
+}
