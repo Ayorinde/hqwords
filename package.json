@@ -1,0 +1,32 @@
+{
+  "name": "hqwords",
+  "version": "0.0.1",
+  "description": "An author's website",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r esm -r dotenv/config src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "author",
+    "poet",
+    "creative",
+    "writing"
+  ],
+  "author": "Ayorinde Kudoro",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "^2.4.8",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.22",
+    "express": "^4.16.4",
+    "graphql": "^14.2.1",
+    "graphql-date": "^1.0.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.5.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
