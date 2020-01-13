@@ -4,7 +4,7 @@
   "description": "An author's website",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -r esm -r dotenv/config src/index.js",
+    "start": "node -r esm -r dotenv/config src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
