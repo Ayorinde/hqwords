@@ -16,7 +16,7 @@ console.log('userLocal: ', userLocal)
 console.log('token in configure: ', token);
 
 const link = new HttpLink({
-    uri: 'http://localhost:4000/graphql',
+    uri: 'https://hqwords.herokuapp.com/graphql', // 'http://localhost:4000/graphql', //'https://hqwords.herokuapp.com/graphql'
     headers: {
         authorization: token ? `Bearer ${token}` : null
     },
