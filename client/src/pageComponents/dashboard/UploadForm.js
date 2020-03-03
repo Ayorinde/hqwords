@@ -17,9 +17,12 @@ export default function UploadForm(props) {
     const [formValues, setFormValues] = useState(null)
     const [selectedFile, setSelectedFile] = useState(null)
 
+    const [buttonDisabled, setButtonDisabled] = useState(false)
+
     const [createBook, { data, loading, error }] = useMutation(CREATEBOOK);
 
     const onSubmit = async (e) => {
+        setButtonDisabled(true);
 
         const formData = new FormData()
         formData.append('file', selectedFile);
@@ -39,7 +42,6 @@ export default function UploadForm(props) {
                 artwork: res.data.secure_url,
                 price: price.value, authorName: authorName.value
             }
-            console.log('all: ', formValues)
 
             setFormValues(formValues)
 
@@ -48,6 +50,7 @@ export default function UploadForm(props) {
         else {
             console.log('no res.data.public_id ... image not uploaded ')
         }
+        setButtonDisabled(false);
     }
 
     const onFileChange = (e) => {
@@ -58,9 +61,12 @@ export default function UploadForm(props) {
 
     if (data) {
         console.log('success: ', data);
+        props.history.push({pathname: `${props.baseUrl}/books`})
+        
     }
     if (error) {
         console.log('error: ', error);
+        
     }
 
     return (
@@ -107,7 +113,7 @@ export default function UploadForm(props) {
                     {loading ? (<p>... uploading book ...</p>) : (error ? error.message : '')}
 
                     <button type="button"
-                        onClick={onSubmit}
+                        onClick={onSubmit} disabled={buttonDisabled}
                         className="btn btn-primary">Submit
                     </button>
 

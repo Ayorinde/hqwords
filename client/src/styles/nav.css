@@ -14,6 +14,21 @@
   /* font-weight: bold; */
   font-size: .9rem;
 }
+/* .app .main .y-navbar .y-navvertical #v-pills-tab.nav-pills #v-pills-home-tab.nav-link.active{
+  color: #E5DADA;  
+  background-color: rgba(153,1,52,.4);
+} */
+.app  .nav-pills .nav-link.active, .nav-pills .nav-link {
+  background-color: #fff;
+  color: rgba(153,1,52,.95);
+}
+
+ .app  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+   background-color: rgba(153,1,52,.95);
+   color: #fff;
+ }
+
+
 
 @media screen and (max-width: 770px) {
   .app .main .y-navbar nav.navbar .navbar-toggler-icon{

@@ -4,7 +4,7 @@ export default function BookItem({ book }) {
     let { _id, title, description, artwork, authorName, price } = book;
 
     return (
-        <div className="card mb-3" style={{ "maxWidth": "540px" }}>
+        <div className="card mb-3" style={{ "maxWidth": "540px", "minWidth":"350px" }}>
             <div className="row no-gutters">
                 <div className="col-md-4">
                     <img src={artwork} className="card-img" alt={title} />

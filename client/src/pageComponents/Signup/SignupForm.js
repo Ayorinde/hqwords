@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useMutation } from '@apollo/react-hooks'
+import { useMutation, useApolloClient } from '@apollo/react-hooks'
 
 import { useInput } from '../../hooks/useInput';
 import SIGNUP from '../../apollo/mutation/signup';
@@ -11,6 +11,8 @@ export default function SignupForm(props) {
     const fname = useInput();
     const lname = useInput();
     const [formValues, setFormValues] = useState(null)
+
+    const client = useApolloClient();
 
     const [signup, { data, loading, error }] = useMutation(SIGNUP);
 
@@ -25,6 +27,8 @@ export default function SignupForm(props) {
     //     }
 
     // }, [done, formValues, token, props.history])
+
+    
 
 
     const onSubmit = (e) => {
@@ -42,8 +46,10 @@ export default function SignupForm(props) {
         console.log('success: ', data);
         console.log('data.signup.token: ', data.signup.token)
         let token = data.signup.token;
-        let toSave = JSON.stringify({ ...formValues, token })
+        let theUser = { fullName: formValues.fullName, email: formValues.email, token }
+        let toSave = JSON.stringify(theUser)
         window.localStorage.setItem(`${constants.APP_NAMESPACE}:user`, toSave);
+        client.writeData({ data: { isLoggedIn: true, user: theUser } });
         props.history.push({
             pathname: routes.DASHBOARD,
             state: { user: formValues }

@@ -4,9 +4,12 @@ import { Nav, NavItem, NavLink } from 'reactstrap';
 
 import UploadForm from '../../pageComponents/dashboard/UploadForm';
 import BookList from '../../pageComponents/Books/BooksList';
-import {GET_USER_BOOKS} from '../../apollo/queries/books'
+import {GET_USER_BOOKS} from '../../apollo/queries/books';
 
-export default function NavVertical({ match }) {
+import {logout} from '../../helpers'
+import * as routes from '../../constants/routes'
+
+export default function NavVertical({ match, history }) {
     //{`${match.url}/${id}`}
     const routes = [
         {
@@ -14,12 +17,12 @@ export default function NavVertical({ match }) {
             exact: true,
             sidebar: () => (
                 <div className="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                    <UploadForm />
+                    <UploadForm history={history} baseUrl={match.url} />
                 </div>),
             main: () => <UploadForm />
         },
         {
-            path: `${match.url}/`,
+            path: `${match.url}/books`,
             exact: true,
             sidebar: () => (
                 <div className="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
@@ -27,8 +30,23 @@ export default function NavVertical({ match }) {
                 </div>
             ),
             main: () => <h2>Bubblegum</h2>
-        }
+        },
+        // {
+        //     path: `${match.url}/logout`,
+        //     exact: true,
+        //     sidebar: () => (
+        //         <div className="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+        //             <BookList listTitle='My Books' listQuery={GET_USER_BOOKS}/>
+        //         </div>
+        //     ),
+        //     main: () => <h2>Bubblegum</h2>
+        // }
     ];
+
+    const handleLogout = () =>{
+        logout();
+        history.push({ pathname: routes.LANDING })
+    }
 
     return (
         <BrowserRouter>
@@ -37,14 +55,15 @@ export default function NavVertical({ match }) {
 
                     <div className="col-3">
                         <div className="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                            <Link to={`${match.url}/upload`} className="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
+                            <RLink to={`${match.url}/upload`} className="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
                                 role="tab" aria-controls="v-pills-home" aria-selected="true">
                                 Upload Book
-                            </Link>
-                            <Link to={`${match.url}/`} className="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
+                            </RLink>
+                            <RLink to={`${match.url}/books`} className="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile"
                                 role="tab" aria-controls="v-pills-profile" aria-selected="false">
                                 My Books
-                            </Link>
+                            </RLink>
+                            <button className="nav-link" onClick={handleLogout}>Log Out</button>
 
                         </div>
                     </div>
@@ -62,6 +81,7 @@ export default function NavVertical({ match }) {
 
                     <div className="col-9">
                         <div className="tab-content" id="v-pills-tabContent">
+                        
                             <Switch>
                                 {routes.map((route, index) => (
                                     <Route
@@ -73,6 +93,7 @@ export default function NavVertical({ match }) {
                                 ))}
 
                             </Switch>
+                            
                         </div>
                     </div>
                 </div>

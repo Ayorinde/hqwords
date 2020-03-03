@@ -7,6 +7,9 @@
     padding-bottom: 4rem;
     padding-top: 1.6rem;    
 }
+.app .y-booklist{
+   
+}
 .app h1.y-section-heading{
     padding: 1rem;
     color: rgba(153,1,52, .8);
@@ -29,6 +32,13 @@
 }
 .app section{
     margin-top: 3rem;
+}
+.app section.y-booklist{
+    margin-top: 0;
+
+}
+.app .y-dashboard .col-9{
+    min-height: 35em;
 }
 .app section.y-about{
     background-image: linear-gradient(105deg,
@@ -60,7 +70,7 @@
 .app section.y-about .btn-primary{
     background-color: #990134 !important;
 }
-.app .y-offerings > h1{
+.app .y-offerings > h1, .app .y-booklist > h1{
     padding: 1rem;
     color: rgba(153,1,52, .8);
     text-shadow: rgba(153,1,52, .2) 1px 2px 2px;

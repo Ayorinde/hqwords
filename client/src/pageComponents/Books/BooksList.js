@@ -6,7 +6,7 @@ import BookItem from './BookItem';
 
 export default function BooksList({listQuery, listTitle}) {
     let theQuery = listQuery? listQuery: GET_BOOKS;
-    const { data, loading, error } = useQuery(theQuery);
+    const { data, loading, error } = useQuery(theQuery, {fetchPolicy: 'network-only'});
     if (loading) {
         return (<p> loading .... </p>)
     }
@@ -22,9 +22,9 @@ export default function BooksList({listQuery, listTitle}) {
             ))
 
             return (
-                <section className="container y-offerings p-3 p-md-5">
+                <section className="container y-booklist  p-3">
                     <h1 className="text-center"> {listTitle || 'Books You Should Read'}</h1>
-                    <div className="card-group">
+                    <div className="card-group ">
                         {
                             loadedLis.length? loadedLis: 
                             <p className="text-center"> :) There are no books at the moment</p>

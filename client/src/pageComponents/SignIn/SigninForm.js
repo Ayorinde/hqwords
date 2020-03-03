@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useMutation } from '@apollo/react-hooks'
+import { useMutation, useApolloClient } from '@apollo/react-hooks'
 
 import { Link, NavLink as RLink, Route } from 'react-router-dom'
 
@@ -14,6 +14,8 @@ export default function SignupForm(props) {
     const [formValues, setFormValues] = useState(null)
 
     const [login, { data, loading, error }] = useMutation(SIGNIN);
+
+    const client = useApolloClient();
 
     // useEffect(() => {
     //     window.localStorage.setItem('hqwords:user', { ...formValues, token });
@@ -32,8 +34,10 @@ export default function SignupForm(props) {
             console.log('success: ', data);
             console.log('data.login.token: ', data.login.token)
             let token = data.login.token;
-            let toSave = JSON.stringify({ email: formValues.email, token })
+            let theUser = { email: formValues.email, token };
+            let toSave = JSON.stringify(theUser)
             window.localStorage.setItem(`${constants.APP_NAMESPACE}:user`, toSave);
+            client.writeData({ data: { isLoggedIn: true, user: theUser } });
             props.history.push({
                 pathname: routes.DASHBOARD,
                 state: { user: {email: formValues.email, token} }
